@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Notifications page</title>
   <link rel="stylesheet" href="../node_modules/@fontsource/plus-jakarta-sans/500.css">
   <link rel="stylesheet" href="../node_modules/@fontsource/plus-jakarta-sans/800.css">
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css">
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/regular.css">
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/solid.css">
   <link rel="stylesheet" href="styles.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -17,85 +19,91 @@
   </style>
 </head>
 <body>
-  <main class="flex flex-col justify-center items-center min-h-screen font-plus-jakarta-sans bg-very-light-grayish-blue">
-    <div class="max-w-xs lg:max-w-xl w-full bg-white rounded-xl my-8 lg:my-0 py-3 px-3 lg:px-6">
+  <main class="flex flex-col justify-center items-center min-h-screen font-plus-jakarta-sans bg-very-light-grayish-blue dark:bg-very-dark-blue">
+    <div class="flex flex-row justify-end absolute top-4 right-8 w-full">
+      <input class="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]" type="checkbox" role="switch" id="theme-switch" />
+      <label class="inline-block pl-[0.15rem] hover:cursor-pointer" for="theme-switch">
+        <i class="fa-regular fa-lightbulb dark:text-white"></i>
+      </label>
+    </div>
+    <div class="max-w-xs lg:max-w-xl w-full bg-white dark:bg-custom-blue rounded-xl my-8 lg:my-0 py-3 px-3 lg:px-6">
       <noscript>
         <p class="text-center text-xs text-custom-red">Javascript must be enabled to view this page properly</p>
       </noscript>
       <header class="flex flex-row justify-between items-center py-4">
         <div class="flex flex-row items-center">
-          <h1 class="text-base lg:text-lg text-very-dark-blue font-extrabold mr-2">Notifications</h1>
-          <span class="text-xs bg-custom-blue font-bold px-2.5 py-1 rounded-md text-white">3</span>
+          <h1 class="text-base lg:text-lg text-very-dark-blue dark:text-white font-extrabold mr-2">Notifications</h1>
+          <span class="text-xs bg-custom-blue dark:bg-white font-bold px-2.5 py-1 rounded-md text-white dark:text-custom-blue">3</span>
         </div>
-        <a href="#" class="text-xs lg:text-sm text-grayish-blue hover:text-custom-blue">Mark all as read</a>
+        <a href="#" class="text-xs lg:text-sm text-grayish-blue hover:text-custom-blue hover:dark:text-very-light-grayish-blue">Mark all as read</a>
       </header>
       <div class="flex flex-row lg:mt-4">
         <div class="space-y-2">
-          <article class="transition ease-in-out delay-300 flex flex-row justify-start py-4 px-2 lg:px-4 bg-very-light-grayish-blue rounded-lg">
+          <article class="transition ease-in-out delay-300 flex flex-row justify-start py-4 px-2 lg:px-4 bg-very-light-grayish-blue dark:bg-blue-950 rounded-lg">
             <img class="w-10 h-10" src="./assets/images/avatar-mark-webber.webp" alt="mark webber" />
             <div class="flex flex-col px-2 lg:px-4">
               <div class="text-xs text-grayish-blue">
-                <span class="font-bold text-very-dark-blue hover:text-custom-blue cursor-pointer mr-1">Mark Webber</span> reacted to your recent post <span class="cursor-pointer font-bold text-dark-grayish-blue hover:text-custom-blue ml-2 lg:ml-1">My first tournament today!</span><div class="inline-block rounded-full bg-custom-red h-2 lg:h-1.5 w-2 lg:w-1.5 ml-2 lg:ml-1"></div>
+                <span class="font-bold text-very-dark-blue dark:text-white hover:text-custom-blue cursor-pointer mr-1">Mark Webber</span> reacted to your recent post <span class="cursor-pointer font-bold text-dark-grayish-blue hover:text-custom-blue hover:dark:text-very-light-grayish-blue ml-2 lg:ml-1">My first tournament today!</span><div class="inline-block rounded-full bg-custom-red h-2 lg:h-1.5 w-2 lg:w-1.5 ml-2 lg:ml-1"></div>
               </div>
               <p class="text-xs text-grayish-blue mt-1">1m ago</p>
             </div>
           </article>
-          <article class="transition ease-in-out delay-300 flex flex-row justify-start py-4 px-2 lg:px-4 bg-very-light-grayish-blue rounded-lg">
+          <article class="transition ease-in-out delay-300 flex flex-row justify-start py-4 px-2 lg:px-4 bg-very-light-grayish-blue dark:bg-blue-950 rounded-lg">
             <img class="w-10 h-10" src="./assets/images/avatar-angela-gray.webp" alt="angela gray" />
             <div class="flex flex-col px-2 lg:px-4">
               <div class="text-xs text-grayish-blue">
-                <span class="font-bold text-very-dark-blue hover:text-custom-blue cursor-pointer mr-1">Angela Gray</span> followed you <div class="inline-block rounded-full bg-custom-red h-2 lg:h-1.5 w-2 lg:w-1.5 ml-1"></div>
+                <span class="font-bold text-very-dark-blue dark:text-white hover:text-custom-blue cursor-pointer mr-1">Angela Gray</span> followed you <div class="inline-block rounded-full bg-custom-red h-2 lg:h-1.5 w-2 lg:w-1.5 ml-1"></div>
               </div>
               <p class="text-xs text-grayish-blue mt-1">5m ago</p>
             </div>
           </article>
-          <article class="transition ease-in-out delay-300 group flex flex-row justify-start py-4 px-2 lg:px-4 bg-very-light-grayish-blue rounded-lg">
+          <article class="transition ease-in-out delay-300 group flex flex-row justify-start py-4 px-2 lg:px-4 bg-very-light-grayish-blue dark:bg-blue-950 rounded-lg">
             <img class="w-10 h-10" src="./assets/images/avatar-jacob-thompson.webp" alt="jacob thompson" />
             <div class="flex flex-col px-2 lg:px-4">
               <div class="text-xs text-grayish-blue">
-                <span class="font-bold text-very-dark-blue hover:text-custom-blue cursor-pointer mr-1">Jacob Thompson</span> has joined your group <span class="font-bold text-dark-grayish-blue group-hover:text-custom-blue cursor-pointer ml-1">Chess Club</span><div class="inline-block rounded-full bg-custom-red h-2 lg:h-1.5 w-2 lg:w-1.5 ml-1"></div>
+                <span class="font-bold text-very-dark-blue dark:text-white hover:text-custom-blue cursor-pointer mr-1">Jacob Thompson</span> has joined your group <span class="font-bold text-dark-grayish-blue hover:text-custom-blue hover:dark:text-very-light-grayish-blue cursor-pointer ml-1">Chess Club</span><div class="inline-block rounded-full bg-custom-red h-2 lg:h-1.5 w-2 lg:w-1.5 ml-1"></div>
               <p class="text-xs text-grayish-blue mt-1">1 day ago</p>
             </div>
           </article>
-          <article class="flex flex-row justify-start py-4 px-2 lg:px-4 bg-white rounded-lg">
+          <article class="flex flex-row justify-start py-4 px-2 lg:px-4 bg-white dark:bg-transparent rounded-lg">
             <img class="w-10 h-10" src="./assets/images/avatar-rizky-hasanuddin.webp" alt="rizky hasanuddin" />
             <div class="flex flex-col px-2 lg:px-4">
               <div class="text-xs text-grayish-blue">
-                <span class="font-bold text-very-dark-blue hover:text-custom-blue cursor-pointer mr-1">Rizky Hasanuddin</span> sent you a private message
+                <span class="font-bold text-very-dark-blue dark:text-white hover:text-custom-blue cursor-pointer mr-1">Rizky Hasanuddin</span> sent you a private message
               </div>
               <p class="text-xs text-grayish-blue mt-1">5 days ago</p>
-              <button class="mt-2 text-xs text-left text-grayish-blue rounded-md border border-light-grayish-blue-1 hover:bg-light-grayish-blue-2 px-4 py-3">
+              <button class="mt-2 text-xs text-left text-grayish-blue rounded-md border border-light-grayish-blue-1 hover:bg-light-grayish-blue-2 hover:dark:dark:bg-blue-950 px-4 py-3">
                 Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
                 I'm already having lots of fun and improving my game.
               </button>
             </div>
           </article>
-          <article class="flex flex-row justify-start py-4 px-2 lg:px-4 bg-white rounded-lg">
+          <article class="flex flex-row justify-start py-4 px-2 lg:px-4 bg-white dark:bg-transparent rounded-lg">
             <img class="w-10 h-10" src="./assets/images/avatar-kimberly-smith.webp" alt="kimberly smith" />
             <div class="flex flex-row justify-between w-full">
               <div class="flex flex-col px-2 lg:px-4">
                 <div class="text-xs text-grayish-blue">
-                  <span class="font-bold text-very-dark-blue hover:text-custom-blue cursor-pointer mr-1">Kimberly Smith</span> commented on your picture
+                  <span class="font-bold text-very-dark-blue dark:text-white hover:text-custom-blue cursor-pointer mr-1">Kimberly Smith</span> commented on your picture
                 </div>
                 <p class="text-xs text-grayish-blue mt-1">1 week ago</p>
               </div>
               <img class="w-10 h-10 rounded-lg ml-2 lg:ml-0" src="./assets/images/image-chess.webp" alt="chess" />
             </div>
           </article>
-          <article class="flex flex-row justify-start py-4 px-2 lg:px-4 bg-white rounded-lg">
+          <article class="flex flex-row justify-start py-4 px-2 lg:px-4 bg-white dark:bg-transparent rounded-lg">
             <img class="w-10 h-10" src="./assets/images/avatar-nathan-peterson.webp" alt="nathan peterson" />
             <div class="flex flex-col px-2 lg:px-4">
               <div class="text-xs text-grayish-blue">
-                <span class="font-bold text-very-dark-blue hover:text-custom-blue cursor-pointer mr-1">Nathan Peterson</span> reacted to your recent post <span class="font-bold text-dark-grayish-blue hover:text-custom-blue cursor-pointer ml-2">5 end-game strategies to increase your win rate</span>
+                <span class="font-bold text-very-dark-blue dark:text-white hover:text-custom-blue cursor-pointer mr-1">Nathan Peterson</span> reacted to your recent post <span class="font-bold text-dark-grayish-blue hover:text-custom-blue hover:dark:text-very-light-grayish-blue cursor-pointer ml-2">5 end-game strategies to increase your win rate</span>
               </div>
               <p class="text-xs text-grayish-blue mt-1">2 weeks ago</p>
             </div>
           </article>
-          <article class="flex flex-row justify-start py-4 px-2 lg:px-4 bg-white rounded-lg">
+          <article class="flex flex-row justify-start py-4 px-2 lg:px-4 bg-white dark:bg-transparent rounded-lg">
             <img class="w-10 h-10" src="./assets/images/avatar-anna-kim.webp" alt="anna kim" />
             <div class="flex flex-col px-2 lg:px-4">
               <div class="text-xs text-grayish-blue">
-                <span class="font-bold text-very-dark-blue hover:text-custom-blue cursor-pointer mr-1">Anna Kim</span> left the group <span class="font-bold text-dark-grayish-blue hover:text-custom-blue cursor-pointer ml-1">Chess Club</span>
+                <span class="font-bold text-very-dark-blue dark:text-white hover:text-custom-blue cursor-pointer mr-1">Anna Kim</span> left the group <span class="font-bold text-dark-grayish-blue hover:text-custom-blue cursor-pointer ml-1">Chess Club</span>
               </div>
               <p class="text-xs text-grayish-blue mt-1">2 weeks ago</p>
             </div>
@@ -105,9 +113,10 @@
     </div>
   </main>
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">slightlyfunctional</a>.
+    Challenge by <a class="font-bold" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="underline" href="#">alexl8819</a>.
   </footer>
   <script src="notification.js" defer></script>
+  <script src="theme.js" defer></script>
 </body>
 </html>

@@ -11,7 +11,6 @@ This is a solution to the [Notifications page challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [Continued development](#continued-development)
-- [Author](#author)
 
 ## Overview
 
@@ -26,11 +25,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./screenshot.png)
+![Mobile Screenshot](./screenshots/mobile.png)
+![Desktop Screenshot](./screenshots/desktop.png)
 
 ### Links
 
-- Live Site URL: [Notifications Page](https://slightlyfunctional.gitlab.io/notifications-page/)
+- Live Site URL: [Notifications Page](https://alexl8819.github.io/notifications-page/)
 
 ## My process
 
@@ -45,8 +45,3 @@ Users should be able to:
 ### Continued development
 
 Focused on making the HTML more semantic and reducing unnecessary CSS classes. I also looked for ways to improve accessibility by presenting a message when things like javascript aren't enabled.
-
-## Author
-
-- Website - [slightlyfunctional.com](https://slightlyfunctional.com)
-- Frontend Mentor - [@slightlyfunctional](https://www.frontendmentor.io/profile/slightlyfunctional)
